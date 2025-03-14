@@ -15,3 +15,12 @@ function handleSubmit(pgn) {
         });
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('pgn').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevents a new line from being added
+            document.getElementById('submit').click();
+        }
+    });
+});
